@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href='style.css'/>
+	<script src='script.js'></script>
+</head>
+<body>
+<div id="A"></div>
+<div id="B"></div>
+<div id="C"></div>
+<p id="A1" onclick="a()">A Value</p>
+<p id="B1" onclick="b()">B Value</p>
+<button type="button" id="calculate" onclick="calculate()">Calculate!</button>
+<p id="C1"></p>
+<p id="total">C Value</p>
+<div id='totalBackground'></div>
+<h1 id="title">A<sup>2</sup>+B<sup>2</sup>=C<sup>2</sup></h1>
+<h1 id='title2'>Pythagorean Theorem</h1>
+
+
+
+
+<script type="style.css">
+#A{
+ position: absolute;
+ width: 2px;
+ height: 252px;
+ background-color: black;
+ left:717px;
+ top: 224;
+    }
+#B{
+    position:absolute;
+    height: 2px;
+    width: 435px;
+    background-color: black;
+    left: 284;
+    top: 474px;
+    }
+#C{
+   -ms-transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+    position: absolute;
+    left:500px;;
+    top:100px;;
+    width:2;
+    height:500;
+    background-color: black;
+    }
+#A1{
+   position: absolute;
+   left:500;
+   top:440;
+    }    
+#B1{
+    position: absolute;
+   -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+   left:680;
+   top:350;
+    }    
+#C1{
+    position: absolute;
+   left:390;
+   top:300;
+    }
+#calculate{
+    position: absolute;
+   left:860;
+   top:340;
+   font-size: 40px;
+    }
+#totalBackground {
+    width: 300px;
+    height: 100px;
+    background-color: #00ffcc;
+    position: absolute;
+    left: 200px;
+    top: 240px;
+    border-radius: 1000000000000%;
+    }
+#total{
+    font-size: 20px;
+    position: absolute;
+    left: 230px;
+    top: 263px;
+    z-index: 1;
+    }
+#title {
+    font-size: 50px;
+    text-align: center;
+    
+    }
+#title2{
+    text-align: center;}
+    
+    
+    html {
+    background-color:#80ffff;}
+</script>
+
+
+
+<script type="text.js">
+var calculate= function(){
+    var aVal = prompt("What is the length of A?");
+    var bVal = prompt("What is the length of B?");
+    document.getElementById('A1').innerHTML= aVal;
+    document.getElementById('B1').innerHTML= bVal;
+    var aSquared = aVal * aVal;
+    var bSquared = bVal * bVal;
+    var total1 = aSquared + bSquared;
+    var totalSquared = Math.sqrt(total1);
+    document.getElementById('total').innerHTML= totalSquared;
+    }
+</script>
+
+
+
+
+</body>
+</html>
